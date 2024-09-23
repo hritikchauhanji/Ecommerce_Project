@@ -26,4 +26,9 @@ public class UserServiceImpl implements UserService {
 		return userDtls; 
 	}
 
+	@Override
+	public UserDtls getUserByEmail(String email) {	
+		return userRepository.findByEmail(email);
+	}
+
 }
